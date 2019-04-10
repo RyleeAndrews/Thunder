@@ -15,7 +15,7 @@ body {
   align-content: center;
 }
 
-Button {
+.landingbtn {
   position: absolute;
   left: 45%;
   top: 50%;
@@ -24,7 +24,21 @@ Button {
   border-radius: 5px;
 }
 
-Button:focus, Button:active, Button.active, Button:focus:active {
+.landingbtn:focus, .landingbtn:active, .landingbtn.active, .landingbtn:focus:active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.mainbtn {
+  border: none;
+  margin-left: 11.5%;
+  font-size: 130%;
+  display: inline-block;
+}
+
+.mainbtn:focus, .mainbtn:active, .mainbtn.active, .mainbtn:focus:active {
   background-image: none;
   outline: none;
   -webkit-box-shadow: none;
@@ -43,4 +57,27 @@ Button:focus, Button:active, Button.active, Button:focus:active {
   font-size: 600%;
   margin-top: 30%;
   text-align: center;
+}
+
+.main {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: white;
+  left: 80px;
+  right: 80px;
+  justify-content: center;
+  align-content: center;
+}
+
+.headerWords {
+  text-align: center;
+  font-size: 300%;
+}
+
+.bottomBar {
+  width: 80%;
+  background-color: black;
+  height: 3px;
+  margin-left: 10%;
 }
