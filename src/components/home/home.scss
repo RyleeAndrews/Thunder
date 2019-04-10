@@ -1,0 +1,46 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/thunder.png');
+}
+
+.full {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: black;
+  left: 80px;
+  right: 80px;
+  justify-content: center;
+  align-content: center;
+}
+
+Button {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 10%;
+  height: 5%;
+  border-radius: 5px;
+}
+
+Button:focus, Button:active, Button.active, Button:focus:active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.openerwords {
+  color: white;
+  font-size: 600%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.openbelow {
+  color: white;
+  font-size: 600%;
+  margin-top: 30%;
+  text-align: center;
+}
