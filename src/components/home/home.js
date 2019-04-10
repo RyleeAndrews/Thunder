@@ -23,13 +23,9 @@ class Home extends React.Component {
       <div>
         {!this.state.clicked ?
           <div className="full">
-            <div className="openerwords">
-              Enter Into the World Of
-            </div>
+        
             <Button className="landingbtn" onClick={this.toggleClicked}> I want bass </Button>
-            <div className='openbelow'>
-              Thunder
-            </div>
+        >
         </div>
         :
         <div className="main">
