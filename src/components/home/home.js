@@ -1,6 +1,7 @@
 import './home.scss';
 import React from 'react';
 import {Button, Image} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 
 
@@ -68,7 +69,9 @@ class Home extends React.Component {
           <div className="header">
             <h4 className="headerWords"> Thunder </h4>
             <Button className="mainbtn"> Home </Button>
-            <Button className="mainbtn"> About </Button>
+            <Link to="/about">
+              <Button className="mainbtn"> About </Button>
+            </Link>
             <Button className="mainbtn"> Music </Button>
             <Button className="mainbtn"> Blog </Button>
             <Button className="mainbtn"> Photography </Button>
