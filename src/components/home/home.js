@@ -1,6 +1,6 @@
 import './home.scss';
 import React from 'react';
-import {Button} from 'semantic-ui-react';
+import {Button, Image} from 'semantic-ui-react';
 
 
 
@@ -10,11 +10,37 @@ class Home extends React.Component {
 
     this.state = {
       clicked: false,
+      slideCount: 1,
     };
+  }
+
+  componentDidMount(){
+    this.interval();
+  }
+
+  componentDidUpdate(){
+    if(this.state.slideCount === 3){
+      clearInterval(this.timer);
+      setTimeout(this.restart, 3500);
+      setTimeout(this.interval, 3500);
+    }
   }
 
   toggleClicked = () => {
     this.setState({clicked: true});
+  }
+
+  restart = () => {
+    this.setState({slideCount: 1});
+  }
+
+  nextSlide = () => {
+    this.setState({slideCount: this.state.slideCount + 1});
+  }
+
+  interval = () => {
+    this.timer = setInterval(this.nextSlide, 3500);
+    this.setState({slideCount: 1});
   }
 
   render(){
@@ -23,7 +49,17 @@ class Home extends React.Component {
       <div>
         {!this.state.clicked ?
           <div className="full">
-        
+          {this.state.slideCount === 1 ?
+            <Image className="landingimg" src={require("../assets/noise.png")} size="large"/>
+            :
+            this.state.slideCount === 2 ?
+            <Image className="landingimg" src={require("../assets/greenghost.png")} size="large"/>
+            :
+            this.state.slideCount === 3 ?
+            <Image className="landingimg" src={require("../assets/cashisking.png")} size="large"/>
+            :
+            null
+          }
             <Button className="landingbtn" onClick={this.toggleClicked}> I want bass </Button>
         >
         </div>
