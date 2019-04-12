@@ -1,16 +1,15 @@
 body {
   height: 100%;
   width: 100%;
-  background-color: black;
-  background-image: url('../assets/ravelights.png')
+  background-color: white;
 }
 
 .full {
   position: absolute;
   top: 0px;
   bottom: 0px;
-  left: 140px;
-  right: 140px;
+  right: 0px;
+  left: 0px;
   justify-content: center;
   align-content: center;
 }
@@ -27,7 +26,7 @@ body {
 
 @keyframes pulse {
   0% {
-    opacity: .7;
+    opacity: .3;
   }
   100% {
     opacity: 1;
