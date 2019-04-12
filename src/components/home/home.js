@@ -67,7 +67,7 @@ class Home extends React.Component {
         :
         <div className="main">
           <div className="header">
-            <h4 className="headerWords"> Thunder </h4>
+            <Image className="headimg" src={require('../assets/facebookcoverfoto.png')} size="large"/>
             <Button className="mainbtn"> Home </Button>
             <Link to="/about">
               <Button className="mainbtn"> About </Button>
@@ -76,6 +76,7 @@ class Home extends React.Component {
             <Button className="mainbtn"> Blog </Button>
             <Button className="mainbtn"> Photography </Button>
             <div className="bottomBar"></div>
+            <Image className="liveimg" src={require('../assets/live.png')} size="large"/>
           </div>
         </div>
       }
