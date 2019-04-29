@@ -2,6 +2,8 @@ import './home.scss';
 import React from 'react';
 import {Button, Image} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
+import { FaSoundcloud } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 
 
@@ -10,7 +12,7 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      clicked: false,
+      clicked: 0,
       slideCount: 1,
     };
   }
@@ -48,7 +50,7 @@ class Home extends React.Component {
 
     return(
       <div>
-        {!this.state.clicked ?
+        {!this.state.clicked === 0 ?
           <div className="full">
           {this.state.slideCount === 1 ?
             <Image className="landingimg" src={require("../assets/noise.png")} size="large"/>
@@ -67,25 +69,24 @@ class Home extends React.Component {
         :
         <div className="main">
           <div className="header">
-            <Image className="headimg" src={require('../assets/psy.png')} size="large"/>
-            <Button className="mainbtn"> Home </Button>
+            <Image className="headimg" src={require('../assets/thunderzombie.png')} size="large"/>
+            <Link to="/">
+              <Button className="mainbtn"> Home </Button>
+            </Link>
             <Link to="/about">
               <Button className="mainbtn"> About </Button>
             </Link>
-            <Button className="mainbtn"> Music </Button>
-            <Button className="mainbtn"> Blog </Button>
-            <Button className="mainbtn"> Photography </Button>
-            <div className="bottomBar"></div>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" className="soundcloud"
-            allow="autoplay"
-            title="soundcloud"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/283338997&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <p className="intro"> Thunder Skye Morales, 21, is a Pacific North West based producer residing in the heart of the Rocky Mountains.
-             He has been producing for about as long as he's been DJing, totaling out around three and a half years.
-             His sets usually consist of a lot of his independent work, up and coming artists, local support, doubles, chops,
-             and a little bit of greed. Thunder's typical set times run about an hour, but are jammed packed full of low frequency shakers
-             and crowd bending madness. If you aren't satisfied with the set within the immediate first fifteen minutes, dubstep obviously isn't your cup of tea. </p>
-            <Image className="liveimg" src={require('../assets/live.png')} size="large"/>
+            <Link to="/music">
+              <Button className="mainbtn"> Music </Button>
+            </Link>
+            <Button className="mainbtn"> Gallery </Button>
+            <a href="https://soundcloud.com/user-735548159" rel="noopener noreferrer" target="_blank">
+              <FaSoundcloud className="soundcloud"/>
+            </a>
+            <a href="https://www.instagram.com/t.hundreds/" rel="noopener noreferrer" target="_blank">
+              <FaInstagram className='insta'/>
+            </a>
+            <Image className="liveimg" src={require('../assets/tracklist.png')} size="large"/>
           </div>
         </div>
       }
