@@ -1,4 +1,4 @@
-import '../home/home.scss';
+import './music.scss';
 import React from 'react';
 import {Button, Image} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
@@ -13,7 +13,7 @@ class Music extends React.Component {
   }
   render(){
     return(
-      <div className="main">
+      <div className="music">
         <div className="header">
           <Image className="headimg" src={require('../assets/thunderzombie.png')} size="large"/>
           <Link to="/home">
@@ -32,6 +32,23 @@ class Music extends React.Component {
           <a href="https://www.instagram.com/t.hundreds/" rel="noopener noreferrer" target="_blank">
             <FaInstagram className='insta'/>
           </a>
+          <div className='musicContainer'>
+            <iframe className="soundcloudsongs" width="100%" height="300" scrolling="no" title="dreamworld" frameborder="no" allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/597383244&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+            <iframe className="soundcloudsongs" width="100%" height="300" scrolling="no" title="dopplerknocker" frameborder="no" allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/592265871&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+            <iframe className="soundcloudsongs" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" title="gawdzilla"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/592268934&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+            <iframe className="soundcloudsongs" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" title="noisecomplaint"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/592270527&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+            <iframe className="soundcloudsongs" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" title="teakettle22"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/592273032&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+          </div>
         </div>
       </div>
     );

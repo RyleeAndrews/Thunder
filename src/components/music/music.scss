@@ -1,0 +1,36 @@
+.music {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.headimg {
+  width: 20%;
+  height: 20%;
+  display: inline-block;
+  float: left;
+  margin-right: 15%;
+  margin-left: 10%;
+}
+
+.musicContainer {
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.header {
+  height: 100%;
+  display: inline-block;
+}
+
+.soundcloudsongs {
+  width: 20%;
+  height: 300px;
+  display: inline-block;
+  margin-right: 10%;
+  -webkit-box-shadow: 8px 8px 2px rgba(106 , 54 , 117, 1);
+  box-shadow: 8px 8px 2px rgba(106 , 54 , 117, 1);
+  margin-bottom: 5%;
+}
