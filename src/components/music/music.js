@@ -16,7 +16,7 @@ class Music extends React.Component {
       <div className="main">
         <div className="header">
           <Image className="headimg" src={require('../assets/thunderzombie.png')} size="large"/>
-          <Link to="/">
+          <Link to="/home">
             <Button className="mainbtn"> Home </Button>
           </Link>
           <Link to="/about">
