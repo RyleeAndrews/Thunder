@@ -12,7 +12,7 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      clicked: 0,
+      clicked: false,
       slideCount: 1,
     };
   }
@@ -50,7 +50,7 @@ class Home extends React.Component {
 
     return(
       <div>
-        {!this.state.clicked === 0 ?
+        {!this.state.clicked ?
           <div className="full">
           {this.state.slideCount === 1 ?
             <Image className="landingimg" src={require("../assets/noise.png")} size="large"/>
